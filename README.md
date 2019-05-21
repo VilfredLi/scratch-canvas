@@ -46,6 +46,7 @@ scratchCanvas.init()
 ```
 
 可用配置项：
+
 选项名 | 类型 | 默认值 | 可选值 | 描述
 :-: | :-: | :-: | - | -
 bg | String | null | 有效的图片url | 若bg的值为有效的图片url，则会在蒙层下自动生成背景
@@ -67,4 +68,4 @@ init() | 初始化并将生成的canvas插入到创建实例时传入的容器�
 
 ## License
 
-MIT
+[MIT](./LICENSE)
