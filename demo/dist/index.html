@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script>hljs.initHighlightingOnLoad()</script><title>ScratchCanvas demo</title></head><body><h1 class="text-center">ScratchCanvas demo</h1><p class="text-center margin-y-s">ScratchCanvas 是一个基于canvas实现“刮刮卡”功能的js库。</p><div class="demo center margin-y-m"><h2 class="demo-title">使用纯色填充蒙层：</h2><div class="demo-content"><div class="pure-mask-scratch-canvas-container"><p class="percent-tips">已经刮开了0%</p></div></div><div class="demo-code" style="height:0"><div class="code-wrapper"><pre><code class="html">
+&lt;div class="container"&gt;
+  &lt;p class="percent-tips"&gt;已经刮开了0%&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre><pre><code class="css">
+.container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+}
+.percent-tips {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 36px;
+}
+.container canvas {
+  position: absolute;
+}
+        </code></pre><pre><code class="javascript">
+import ScratchCanvas from 'scratch-canvas'
+const container = document.querySelector('.container')
+const scratchCanvas = new ScratchCanvas(container, {
+  mask: '#999',
+  onScratch: function (percent) {
+    document.querySelector('.container .percent-tips').textContent = '已经刮开了' + percent + '%'
+  }
+})
+scratchCanvas.init()
+        </code></pre></div></div><div class="btn-toggle-code">显示代码</div></div><div class="demo center margin-y-m"><h2 class="demo-title">使用图片蒙层：</h2><div class="demo-content"><div class="image-mask-scratch-canvas-container"><p class="percent-tips">已经刮开了0%</p></div></div><div class="demo-code" style="height:0"><div class="code-wrapper"><pre><code class="html">
+&lt;div class="container"&gt;
+  &lt;p class="percent-tips"&gt;已经刮开了0%&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre><pre><code class="css">
+.container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+}
+.percent-tips {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 36px;
+}
+.container canvas {
+  position: absolute;
+}
+        </code></pre><pre><code class="javascript">
+import ScratchCanvas from 'scratch-canvas'
+const container = document.querySelector('.container')
+const scratchCanvas = new ScratchCanvas(container, {
+  mask: require('./mask.png'),
+  pureMask: false,
+  onScratch: function (percent) {
+    document.querySelector('.container .percent-tips').textContent = '已经刮开了' + percent + '%'
+  }
+})
+scratchCanvas.init()
+        </code></pre></div></div><div class="btn-toggle-code">显示代码</div></div><div class="demo center margin-y-m"><h2 class="demo-title">也可以通过给ScratchCanvas实例传入图片来创建背景层：</h2><div class="demo-content"><div class="bg-scratch-canvas-container"></div></div><div class="demo-code" style="height:0"><div class="code-wrapper"><pre><code class="html">
+&lt;div class="container"&gt;&lt;/div&gt;
+        </code></pre><pre><code class="css">
+.container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+}
+        </code></pre><pre><code class="javascript">
+import ScratchCanvas from 'scratch-canvas'
+const container = document.querySelector('.container')
+const scratchCanvas = new ScratchCanvas(container, {
+  mask: require('./mask.png'),
+  pureMask: false,
+  bg: require('./bg.png'),
+  brushSize: 80,
+  brushPress: 0.025
+})
+scratchCanvas.init()
+        </code></pre></div></div><div class="btn-toggle-code">显示代码</div></div><script type="text/javascript" src="./main.js"></script></body></html>
