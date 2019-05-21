@@ -1,0 +1,171 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  user-select: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+}
+body {
+  padding: 25px 0;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.center {
+  margin: 0 auto;
+}
+.margin-y-s {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.margin-y-m {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.demo {
+  width: 800px;
+  border: 1px solid #d6dada;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.demo-title {
+  height: 60px;
+  border-bottom: 1px solid #d6dada;
+  line-height: 60px;
+  text-indent: 2rem;
+}
+.demo-content {
+
+}
+.demo-code {
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.demo-code .code-wrapper {
+  padding: 0;
+}
+pre {
+  display: block;
+  position: relative;
+  margin: 20px;
+  width: auto;
+  height: auto;
+}
+code {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  user-select: text;
+}
+code:before {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #a0a1a7;
+}
+code.html:before {
+  content: "html";
+}
+code.css:before {
+  content: "css";
+}
+code.javascript:before {
+  content: "js";
+}
+code * {
+  user-select: text;
+}
+.btn-toggle-code {
+  height: 45px;
+  border-top: 1px solid #d6dada;
+  background-color: #fff;
+  color: #aaa;
+  line-height: 45px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-toggle-code:hover {
+  background-color: #0093ff30;
+  color: #0093ff;
+}
+.pure-mask-scratch-canvas-container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+}
+.image-mask-scratch-canvas-container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+}
+.bg-scratch-canvas-container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+}
+.percent-tips {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 36px;
+}
+.pure-mask-scratch-canvas-container canvas,
+.image-mask-scratch-canvas-container canvas,
+.bg-scratch-canvas-container canvas {
+  position: absolute;
+}

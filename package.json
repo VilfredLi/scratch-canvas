@@ -1,0 +1,56 @@
+{
+  "name": "scratch-canvas",
+  "version": "0.0.1",
+  "description": "Append a scratchable canvas in html.",
+  "main": "./dist/scratch-canvas.min.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint \"src/**/*.{js,jsx,vue}\""
+    }
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --config ./config/webpackDev.config.js",
+    "build": "webpack --config ./config/webpack.config.js",
+    "build:demo": "webpack --config ./config/webpackDemo.config.js"
+  },
+  "keywords": [
+    "javascript",
+    "canvas",
+    "scratch"
+  ],
+  "author": "Vilfred Li (https://github.com/VilfredLi)",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/runtime-corejs2": "^7.4.4",
+    "lodash.throttle": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.2.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
