@@ -28,9 +28,11 @@ $ npm install scratch-canvas
 <div class="container"></div>
 ```
 
-将容器元素传递给构造函数后调用实例的init方法即可：
+在js中引入ScratchCanvas并将容器元素传递给构造函数后调用实例的init方法即可：
 
 ```js
+import ScratchCanvas from 'scratch-canvas'
+
 const containerElm = document.querySelector('.container')
 const scratchCanvas = new ScratchCanvas(containerElm)
 scratchCanvas.init()
